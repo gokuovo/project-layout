@@ -1,0 +1,10 @@
+server:
+  port: 8091
+datasource:
+  driverName: mysql
+  host: 101.43.132.47
+  port: 3306
+  database: demo
+  username: root
+  password: qwe123
+  charset: utf8
