@@ -2,7 +2,7 @@ package configs
 
 import (
 	"fmt"
-	models "github.com/YOUR-USER-OR-ORG-NAME/YOUR-REPO-NAME/pkg/model"
+	models "github.com/gokuovo/project-layout/pkg/model"
 	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

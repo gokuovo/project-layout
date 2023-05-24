@@ -1,12 +1,12 @@
 package service
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/gokuovo/project-layout/configs"
 	"github.com/gokuovo/project-layout/pkg/model"
 	"github.com/gokuovo/project-layout/pkg/response"
 	"net/http"
+	"time"
 )
 
 // AddCar 新增车辆信息
@@ -41,7 +41,7 @@ func AddCar(ctx *gin.Context) {
 		return
 	}
 
-	if len(car.InsuranceCompany) == 0 {
+	if len(car.InsuranceStatus) == 0 {
 		response.Response(ctx, http.StatusBadRequest, 400, "保险公司不能为空", nil)
 		return
 	}
@@ -61,6 +61,8 @@ func AddCar(ctx *gin.Context) {
 		return
 	}
 
+	onlineDate := time.Now().Format("2006-01-02")
+	car.OnlineDay = onlineDate
 	//创建车辆
 	newCar := model.CarManagement{
 		Driver:          car.Driver,
@@ -73,11 +75,11 @@ func AddCar(ctx *gin.Context) {
 		InsuranceStatus: car.InsuranceStatus,
 		InsuranceType:   car.InsuranceType,
 		CarStatus:       car.CarStatus,
+		CarImageUrl:     car.CarImageUrl,
 	}
 	result := db.Create(&newCar)
 	if result.Error == nil {
 		response.Success(ctx, "新增成功", nil)
-		fmt.Println("1")
 	} else {
 		response.Success(ctx, "新增失败", nil)
 	}

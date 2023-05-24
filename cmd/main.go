@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/YOUR-USER-OR-ORG-NAME/YOUR-REPO-NAME/configs"
-	route "github.com/YOUR-USER-OR-ORG-NAME/YOUR-REPO-NAME/pkg/router"
 	"github.com/gin-gonic/gin"
+	"github.com/gokuovo/project-layout/configs"
+	route "github.com/gokuovo/project-layout/pkg/router"
 	"github.com/spf13/viper"
 )
 
