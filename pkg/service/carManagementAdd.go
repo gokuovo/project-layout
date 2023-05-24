@@ -2,10 +2,10 @@ package service
 
 import (
 	"fmt"
-	"github.com/YOUR-USER-OR-ORG-NAME/YOUR-REPO-NAME/configs"
-	"github.com/YOUR-USER-OR-ORG-NAME/YOUR-REPO-NAME/pkg/model"
-	"github.com/YOUR-USER-OR-ORG-NAME/YOUR-REPO-NAME/pkg/response"
 	"github.com/gin-gonic/gin"
+	"github.com/gokuovo/project-layout/configs"
+	"github.com/gokuovo/project-layout/pkg/model"
+	"github.com/gokuovo/project-layout/pkg/response"
 	"net/http"
 )
 
