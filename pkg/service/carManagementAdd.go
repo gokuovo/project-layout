@@ -9,7 +9,7 @@ import (
 	"net/http"
 )
 
-// 新增车辆信息
+// AddCar 新增车辆信息
 func AddCar(ctx *gin.Context) {
 	db := configs.GetDB()
 
