@@ -73,7 +73,9 @@ func ModifyCar(ctx *gin.Context) {
 		CarImageUrl:     car.CarImageUrl,
 	}
 
+	//根据id修改数据
 	result := db.Model(model.CarManagement{}).Where("car_id = ?", newCar.CarID).Updates(newCar)
+
 	if result.Error == nil {
 		response.Success(ctx, "修改成功", nil)
 	} else {

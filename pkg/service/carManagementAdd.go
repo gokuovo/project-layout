@@ -61,8 +61,10 @@ func AddCar(ctx *gin.Context) {
 		return
 	}
 
+	//上线时间
 	onlineDate := time.Now().Format("2006-01-02")
 	car.OnlineDay = onlineDate
+
 	//创建车辆
 	newCar := model.CarManagement{
 		Driver:          car.Driver,
@@ -77,6 +79,8 @@ func AddCar(ctx *gin.Context) {
 		CarStatus:       car.CarStatus,
 		CarImageUrl:     car.CarImageUrl,
 	}
+
+	//新增数据
 	result := db.Create(&newCar)
 	if result.Error == nil {
 		response.Success(ctx, "新增成功", nil)

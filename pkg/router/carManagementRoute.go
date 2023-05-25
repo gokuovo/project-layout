@@ -20,12 +20,12 @@ func CollectRoute(r *gin.Engine) {
 		//修改车辆信息
 		carManagementGroup.PUT("/modifyCar", service.ModifyCar)
 
-		//查询车辆信息
+		//查询全部车辆信息
+		carManagementGroup.GET("/searchAllCar", service.SearchAllCar)
 
-		////selectone
-		//userGroup.GET("/selectOne", service.SelectOneUser)
-		////selectall
-		//userGroup.GET("/selectAll", service.SelectAllUser)
+		//根据条件查询车辆信息
+		carManagementGroup.GET("/searchCar", service.SearchCar)
+
 		////delete
 		//userGroup.DELETE("/deleteUser", service.DeleteUser)
 		////UnscopedDelete

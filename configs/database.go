@@ -35,7 +35,9 @@ func InitDB() *gorm.DB {
 	if err != nil {
 		panic("failed to connect database,err:" + err.Error())
 	}
-	db.AutoMigrate(&models.CarManagement{})
+	db.AutoMigrate(&models.CarManagement{}, &models.CarColor{}, &models.CarType{},
+		&models.InsuranceStatus{}, &models.InsuranceType{}, &models.LeaseCompany{},
+		&models.StatusCode{})
 
 	DB = db
 	return db

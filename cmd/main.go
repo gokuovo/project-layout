@@ -24,7 +24,7 @@ func InitConfig() {
 	//workDir, _ := os.Getwd()
 	//viper.SetConfigName("application-dev")
 	//viper.SetConfigType("yml")
-	viper.SetConfigFile("./configs/application-dev.yml")
+	viper.SetConfigFile("./configs/application-test.yml")
 	err := viper.ReadInConfig()
 	if err != nil {
 		panic(err.Error())
