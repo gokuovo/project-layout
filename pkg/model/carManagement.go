@@ -12,6 +12,8 @@ type CarManagement struct {
 	InsuranceStatus string `json:"insuranceStatus" gorm:"type:varchar(10);comment:保险状态;"`
 	InsuranceType   string `json:"insuranceType" gorm:"type:varchar(10);comment:险种;"`
 	CarStatus       string `json:"carStatus" gorm:"type:varchar(10);comment:状态;"`
+	OperationalArea string `json:"operationalArea" gorm:"type:varchar(50);comment:运营域;"`
+	PositionMonitor string `json:"positionMonitor" gorm:"type:varchar(50);comment:位置监控;"`
 	CarImageUrl     string `json:"carImageUrl" gorm:"type:varchar(200);comment:车辆照片;"`
 	Model
 }
